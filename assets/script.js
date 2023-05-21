@@ -17,8 +17,8 @@ const slides = [
 	}
 ]
 
-const slideMinIndexValue = 0;
-const SlideMaxIndexValue = 3
+const slideMinIndexValue = 0
+const slideMaxIndexValue = slides.length - 1
 
 let slideCurrentIndex = 0
 
@@ -50,13 +50,13 @@ const onArrowClick = (element) => {
 	switch (element.id) {
 		case "arrow_left":
 			if (slideCurrentIndex === slideMinIndexValue) {
-				slideCurrentIndex = SlideMaxIndexValue
+				slideCurrentIndex = slideMaxIndexValue
 			} else {
 				slideCurrentIndex -= 1
 			}
 			break
 		case "arrow_right":
-			if (slideCurrentIndex === SlideMaxIndexValue) {
+			if (slideCurrentIndex === slideMaxIndexValue) {
 				slideCurrentIndex = slideMinIndexValue
 			} else {
 				slideCurrentIndex += 1
